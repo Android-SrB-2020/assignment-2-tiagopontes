@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
+import work.nbcc.quiz.databinding.FragmentAboutBinding
 import work.nbcc.quiz.databinding.FragmentMainBinding
 
 /**
@@ -16,7 +17,7 @@ import work.nbcc.quiz.databinding.FragmentMainBinding
 class AboutFragment : Fragment() {
 
 
-    private lateinit var binding: FragmentMainBinding
+    private lateinit var binding: FragmentAboutBinding
     private lateinit var navController: NavController
 
 
@@ -25,14 +26,9 @@ class AboutFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = DataBindingUtil.inflate(
-            inflater,
-            R.layout.fragment_main,
-            container, false
-        )
-
-        return binding.root
+        return inflater.inflate(R.layout.fragment_about, container, false)
     }
+
 
 
 }

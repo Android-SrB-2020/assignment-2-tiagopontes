@@ -51,6 +51,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val binding =
+            DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
+
+        drawerLayout = binding.drawerLayout
+
+        // Set up Up button and Hamburger menu button
+        navController = this.findNavController(R.id.nav_host_fragment_container)
+        NavigationUI.setupActionBarWithNavController(this, navController, drawerLayout)
+
+        //drawer
+       // NavigationUI.setupWithNavController(binding.navView, navController)
+
+
         findViewById<TextView>(R.id.question_view).setText(questionBank[questionIndex].textResId)
 
         findViewById<ImageButton>(R.id.next_button).setOnClickListener{
@@ -88,6 +101,10 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        return NavigationUI.navigateUp(navController, drawerLayout)
     }
 
 

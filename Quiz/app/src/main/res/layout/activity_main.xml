@@ -6,10 +6,12 @@
 
     >
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".MainActivity"
+        android:fitsSystemWindows="true" >
 
         <TextView
             android:id="@+id/question_view"
@@ -85,7 +87,7 @@
             app:layout_constraintTop_toBottomOf="@+id/next_button" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.drawerlayout.widget.DrawerLayout>
 
 </layout>
 

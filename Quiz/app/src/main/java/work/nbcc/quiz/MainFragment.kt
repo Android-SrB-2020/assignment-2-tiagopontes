@@ -21,6 +21,7 @@ class MainFragment : Fragment() {
     private lateinit var binding: FragmentMainBinding
     private lateinit var navController: NavController
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -32,6 +33,8 @@ class MainFragment : Fragment() {
             container, false
         )
 
+        setHasOptionsMenu(true)
+
         return binding.root
     }
 
@@ -41,13 +44,14 @@ class MainFragment : Fragment() {
         navController = view.findNavController()
 
         binding.apply {
-            cheatButton.setOnClickListener{
+
+            cheatButton.setOnClickListener {
                 navController.navigate(R.id.action_mainFragment_to_cheatFragment)
+            }
+
+
             }
         }
     }
 
 
-
-
-}

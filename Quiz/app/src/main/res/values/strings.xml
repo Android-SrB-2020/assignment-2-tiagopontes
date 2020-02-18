@@ -22,10 +22,10 @@
     <string name="question_20">The Conjoint Twin That Simultaneously Host The News &amp;v A Cooking Show Are Calle Michael &amp; Pichael?</string>
     <string name="next_button">next button</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="show_button">show</string>
     <string name="text_about" />
     <string name="about_label" />
+    <string name="about_top" />
 
 </resources>
